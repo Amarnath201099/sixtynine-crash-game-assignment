@@ -29,8 +29,7 @@ An online multiplayer crash betting game where users place bets in USD (converte
 ### 1. Clone Repo
 
 ```bash
-git clone https://github.com/your-username/crypto-crash-backend.git
-cd crypto-crash-backend
+git clone https://github.com/Amarnath201099/sixtynine-crash-game-assignment.git
 ```
 
 ## 2. Install Dependencies
@@ -57,9 +56,21 @@ npm start
 
 ---
 
+## 📌 Important Note
+
+To avoid unnecessary round creation and MongoDB overload during local development and testing, the `startGameLoop()` call is **commented out** in the `index.js` file located at: `src/db/index.js`
+
+```
+// startGameLoop();
+```
+
+If you want to test the game engine locally, simply uncomment the startGameLoop() call in the src/db/index.js file.
+
+---
+
 # 📌 API Endpoints
 
-## 🎲 Bet Routes (`/api/bets`)
+## 🎲 Bet Routes (`/api/bet`)
 
 - **POST** `/:playerId`  
   Place a bet.
@@ -67,7 +78,7 @@ npm start
 - **POST** `/cashout/:playerId`  
   Cashout from a running round.
 
-## 💼 Wallet Routes (`/api/wallets`)
+## 💼 Wallet Routes (`/api/wallet`)
 
 - **GET** `/:playerId`  
   Get wallet balance.
@@ -75,7 +86,7 @@ npm start
 - **POST** `/:playerId`  
   Create wallet for a player with initial balance.
 
-## 👤 Player Routes (`/api/players`)
+## 👤 Player Routes (`/api/player`)
 
 - **POST** `/`  
   Register a new player.
@@ -105,6 +116,25 @@ Prices are fetched on-demand during bet placement.
 
 ---
 
-# 📬 Deployment
+## 📬 Deployment
 
-Backend hosted on: [Render Link - TBD]
+Backend hosted on: [Render Link](https://sixtyninender.com/)
+
+> ⚠️ Note: In production, `startGameLoop()` is intentionally commented out to prevent MongoDB overload.  
+> For local testing, uncomment the `startGameLoop()` line in `src/db/index.js`.  
+> (See **📌 Important Note** section above for full details.)
+
+## Future Upgrades
+
+- Add real-time updates with WebSocket for bets, rounds, and cashouts.
+- Automate game round start using a production-ready game loop.
+- Improve wallet balance handling to prevent inconsistencies.
+- Create APIs for round history and current round details.
+- Enhance error handling and add user authentication.
+
+---
+
+Thank you for using the Crypto Crash Betting Game backend!  
+If you have any questions or want to contribute, feel free to open an issue or submit a pull request.
+
+Happy coding! 🚀

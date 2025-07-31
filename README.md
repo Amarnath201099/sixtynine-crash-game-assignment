@@ -118,7 +118,7 @@ Prices are fetched on-demand during bet placement.
 
 ## 📬 Deployment
 
-Backend hosted on: [Render Link](https://sixtyninender.com/)
+Backend hosted on: [Render Link](https://sixtynine-crash-game-assignment.onrender.com/)
 
 > ⚠️ Note: In production, `startGameLoop()` is intentionally commented out to prevent MongoDB overload.  
 > For local testing, uncomment the `startGameLoop()` line in `src/db/index.js`.  

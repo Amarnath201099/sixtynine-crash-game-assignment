@@ -1,0 +1,63 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# VS Code settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Node modules (for Node.js projects)
+node_modules/
+
+# Environment variables
+.env
+
+# Compiled files
+*.class
+*.o
+*.so
+
+# Build artifacts
+/dist
+/build
+*.egg-info/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDEs
+.idea/
+*.sw?
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Test cache
+.cache/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# System backup files
+*.bak
+*.tmp
+*~
+
+# Thumbnails
+Thumbs.db
